@@ -35,7 +35,7 @@ const twoSumMap = (nums, target) => {
 }
 
 //Time: O(n)
-function twoSumMap2(nums, target) {
+const twoSumMap2 = (nums, target) => {
   const map = {};
   for (let i = 0; i < nums.length; i++) {
     const complement = target - nums[i];
