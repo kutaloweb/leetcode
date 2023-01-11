@@ -38,7 +38,7 @@ const twoSumBrute2 = (nums, target) => {
   }
 }
 
-//Time: O(n)
+// Time: O(n)
 const twoSumMap = (nums, target) => {
   const map = new Map();
   for (let i = 0; i < nums.length; i++) {
@@ -51,11 +51,11 @@ const twoSumMap = (nums, target) => {
   return [];
 }
 
-//Time: O(n)
+// Time: O(n)
 const twoSumMap2 = (nums, target) => {
   const map = {};
   for (let i = 0; i < nums.length; i++) {
-    map[nums[i]] = i; // { '3': 0, '2': 1, '4': 2 }
+    map[nums[i]] = i; // { '2': 0, '7': 1, '11': 2, '15': 3 } | { '3': 0, '2': 1, '4': 2 }
   }
   for (let i = 0; i < nums.length; i++) {
     const complement = target - nums[i];
