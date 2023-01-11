@@ -65,9 +65,9 @@ const twoSumMap2 = (nums, target) => {
   }
 }
 
-console.log(twoSumBrute([2,7,11,15], 9));
-console.log(twoSumBrute2([2,7,11,15], 9));
-console.log(twoSumMap([2,7,11,15], 9));
+console.log(twoSumBrute([2, 7, 11, 15], 9));
+console.log(twoSumBrute2([2, 7, 11, 15], 9));
+console.log(twoSumMap([2, 7, 11, 15], 9));
 console.log(twoSumMap2([2, 7, 11, 15], 9));
 
 console.log(twoSumBrute([3, 2, 4], 6));
