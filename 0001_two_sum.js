@@ -14,7 +14,6 @@
 // Input: nums = [3,2,4], target = 6
 // Output: [1,2]
 
-// Time: O(n^2)
 /**
  * @param {number[]} nums
  * @param {number} target
@@ -32,7 +31,6 @@ const twoSumBrute = (nums, target) => {
   return result;
 }
 
-// Time: O(n)
 /**
  * @param {number[]} nums
  * @param {number} target
@@ -50,7 +48,6 @@ const twoSumMap = (nums, target) => {
   return [];
 }
 
-// Time: O(n)
 /**
  * @param {number[]} nums
  * @param {number} target
@@ -72,7 +69,3 @@ const twoSumMap2 = (nums, target) => {
 console.log(twoSumBrute([2, 7, 11, 15], 9));
 console.log(twoSumMap([2, 7, 11, 15], 9));
 console.log(twoSumMap2([2, 7, 11, 15], 9));
-
-console.log(twoSumBrute([3, 2, 4], 6));
-console.log(twoSumMap([3, 2, 4], 6));
-console.log(twoSumMap2([3, 2, 4], 6));
