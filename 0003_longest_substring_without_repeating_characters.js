@@ -78,7 +78,7 @@ const longestSubstringBrute3 = (s) => {
   for (let char of s) {
     if (substring.includes(char)) {
       let index = substring.indexOf(char);
-      substring = substring.substring(index + 1);
+      substring = substring.slice(index + 1);
     }
     substring += char;
     if (substring.length > maxLength) {
