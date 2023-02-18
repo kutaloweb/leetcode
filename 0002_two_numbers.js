@@ -36,8 +36,8 @@ const addTwoNumbers = (l1, l2) => {
     carryOver = Math.floor(sum / 10);
     current.next = new ListNode(sum % 10);
     current = current.next;
-    pointer1 ? pointer1 = pointer1.next : {};
-    pointer2 ? pointer2 = pointer2.next : {};
+    pointer1 = pointer1 && pointer1.next;
+    pointer2 = pointer2 && pointer2.next;
   }
   if (carryOver > 0) current.next = new ListNode(carryOver);
   return dummyNode.next;
