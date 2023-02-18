@@ -15,6 +15,11 @@
 // Output: [1,2]
 
 // Time: O(n^2)
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
 const twoSumBrute = (nums, target) => {
   const result = [];
   for (let i = 0; i < nums.length; i++) {
@@ -27,18 +32,12 @@ const twoSumBrute = (nums, target) => {
   return result;
 }
 
-// Time: O(n^2)
-const twoSumBrute2 = (nums, target) => {
-  for (let i = 0; i < nums.length; i++) {
-    for (let j = i + 1; j < nums.length; j++) {
-      if (nums[i] + nums[j] === target) {
-        return [i, j];
-      }
-    }
-  }
-}
-
 // Time: O(n)
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
 const twoSumMap = (nums, target) => {
   const map = new Map();
   for (let i = 0; i < nums.length; i++) {
@@ -52,6 +51,11 @@ const twoSumMap = (nums, target) => {
 }
 
 // Time: O(n)
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
 const twoSumMap2 = (nums, target) => {
   const map = {};
   for (let i = 0; i < nums.length; i++) {
@@ -66,11 +70,9 @@ const twoSumMap2 = (nums, target) => {
 }
 
 console.log(twoSumBrute([2, 7, 11, 15], 9));
-console.log(twoSumBrute2([2, 7, 11, 15], 9));
 console.log(twoSumMap([2, 7, 11, 15], 9));
 console.log(twoSumMap2([2, 7, 11, 15], 9));
 
 console.log(twoSumBrute([3, 2, 4], 6));
-console.log(twoSumBrute2([3, 2, 4], 6));
 console.log(twoSumMap([3, 2, 4], 6));
 console.log(twoSumMap2([3, 2, 4], 6));
