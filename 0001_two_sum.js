@@ -39,11 +39,11 @@ const twoSumBrute = (nums, target) => {
 const twoSumMap = (nums, target) => {
   const map = new Map();
   for (let i = 0; i < nums.length; i++) {
-    const complement = target - nums[i];
-    if (map.has(complement)) {
+    const complement = target - nums[i]; // 7 2
+    if (map.has(complement)) { // {2:0}
       return [map.get(complement), i];
     }
-    map.set(nums[i], i);
+    map.set(nums[i], i); // {2:0}
   }
   return [];
 }
@@ -56,10 +56,10 @@ const twoSumMap = (nums, target) => {
 const twoSumMap2 = (nums, target) => {
   const map = {};
   for (let i = 0; i < nums.length; i++) {
-    map[nums[i]] = i; // { '2': 0, '7': 1, '11': 2, '15': 3 } | { '3': 0, '2': 1, '4': 2 }
+    map[nums[i]] = i; // {2:0,7:1,11:2,15:3}
   }
   for (let i = 0; i < nums.length; i++) {
-    const complement = target - nums[i];
+    const complement = target - nums[i]; // 7
     if (complement in map && map[complement] !== i) {
       return [i, map[complement]];
     }

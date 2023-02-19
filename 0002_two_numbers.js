@@ -30,9 +30,9 @@ const addTwoNumbers = (l1, l2) => {
   while (l1 || l2) {
     let x = l1 ? l1.val : 0;
     let y = l2 ? l2.val : 0;
-    let sum = x + y + carryOver;
-    carryOver = Math.floor(sum / 10);
-    let lastDigit = sum % 10;
+    let sum = x + y + carryOver; // 7 10 8
+    carryOver = Math.floor(sum / 10); // 0 1 0
+    let lastDigit = sum % 10; // 7 0 8
     current.next = new ListNode(lastDigit);
     l1 = l1 && l1.next;
     l2 = l2 && l2.next;
