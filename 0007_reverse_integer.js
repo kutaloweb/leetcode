@@ -23,16 +23,16 @@
  * @return {number}
  */
 const reverse = (x) => {
-  const sign = x > 0 ? 1 : -1
-  const result = Math.abs(x).toString().split('').reverse().join('')
-  return parseInt(result) > 2 ** 31 - 1 ? 0 : sign * parseInt(result)
+  const sign = x > 0 ? 1 : -1;
+  const result = Math.abs(x).toString().split('').reverse().join('');
+  return parseInt(result) > 2 ** 31 - 1 ? 0 : sign * parseInt(result);
 }
 
 /**
  * @param {number} x
  * @return {number}
  */
-const reverse2 = x => {
+const reverse2 = (x) => {
   let reversedArray = [];
   let xArray = x.toString().split('');
   for (let i = 0; i < xArray.length; i++) {

@@ -17,7 +17,7 @@
  * @param {string} s
  * @return {string}
  */
-function longestPalindrome(s) {
+const longestPalindrome = (s) => {
   let palindrome = "";
   for (let i = 0; i < s.length; i++) { // babad
     let subStr = "";
@@ -34,17 +34,17 @@ function longestPalindrome(s) {
 function isPalindrome(str) {
   for (let i = 0; i < str.length / 2; i++) {
     if (str[i] !== str[str.length - i - 1]) {
-      return false
+      return false;
     }
   }
-  return true
+  return true;
 }
 
 /**
  * @param {string} s
  * @return {string}
  */
-function longestPalindrome2(s) {
+const longestPalindrome2 = (s) => {
   let palindrome = s[0];
   for (let i = 0; i < s.length; i++) {
     for (let j = i + 1; j < s.length + 1; j++) {
@@ -58,7 +58,7 @@ function longestPalindrome2(s) {
 }
 
 function isPalindrome2(str) {
-  let reverseStr = str.split('').reverse().join('')
+  let reverseStr = str.split('').reverse().join('');
   return str === reverseStr;
 }
 
