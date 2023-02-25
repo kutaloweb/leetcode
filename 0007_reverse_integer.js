@@ -23,8 +23,8 @@
  * @return {number}
  */
 const reverse = (x) => {
-  const sign = x > 0 ? 1 : -1;
-  const result = Math.abs(x).toString().split('').reverse().join('');
+  const sign = x > 0 ? 1 : -1; // -1
+  const result = Math.abs(x).toString().split('').reverse().join(''); // '321'
   return parseInt(result) > 2 ** 31 - 1 ? 0 : sign * parseInt(result);
 }
 
@@ -36,11 +36,11 @@ const reverse2 = (x) => {
   let reversedArray = [];
   let xArray = x.toString().split('');
   for (let i = 0; i < xArray.length; i++) {
-    reversedArray.unshift(parseInt(xArray[i]));
+    reversedArray.unshift(parseInt(xArray[i])); // [ 3, 2, 1, NaN ]
   }
-  let reverse = parseInt(reversedArray.join(''));
-  if (reverse > 2 ** 31 - 1) return 0;
-  return x > 0 ? reverse : -reverse;
+  let result = parseInt(reversedArray.join('')); // '321'
+  if (result > 2 ** 31 - 1) return 0;
+  return x > 0 ? result : -result;
 };
 
 console.log(reverse(-123));
