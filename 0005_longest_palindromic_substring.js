@@ -48,7 +48,7 @@ const longestPalindrome2 = (s) => {
   let palindrome = s[0];
   for (let i = 0; i < s.length; i++) {
     for (let j = i + 1; j < s.length + 1; j++) {
-      let subStr = s.slice(i, j);  // b ba bab baba babad > a ab aba adad > b ba bad > a ad d
+      let subStr = s.slice(i, j);  // b ba bab baba babad | a ab aba adad | b ba bad > a ad d
       if (subStr.length > palindrome.length && isPalindrome2(subStr)) {
         palindrome = subStr; //bab
       }

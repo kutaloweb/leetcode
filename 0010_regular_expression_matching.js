@@ -33,14 +33,14 @@ const isMatch = (s, p) => {
   // If both are empty then nothing to match so true
   if (!s && !p) return true;
   // Let's find out if first char is match or if pattern char is '.' (then it can match any alphabet)
-  let hasMatching = s.length > 0 && (s[0] === p[0] || p[0] === '.');
+  let hasMatching = s.length > 0 && (s[0] === p[0] || p[0] === '.'); // true 2>0 a==a a==. | false 2>0 a!=und | true 1>0 a==a a==. | false 1>0 a!=und | false 0>0
   // Case 1: if we find * after first char match
-  if (p[1] === '*') {
+  if (p[1] === '*') { // * und * und *
     // Match without current pattern char or match with current pattern char for rest of the string
-    return (isMatch(s, p.slice(2)) || hasMatching && isMatch(s.slice(1), p));
+    return (isMatch(s, p.slice(2)) || hasMatching && isMatch(s.slice(1), p)); // true (a,a*) | true (a*) | false ()
   }
   // Case 2: if we don't find * after first char match
-  return hasMatching ? isMatch(s.slice(1), p.slice(1)) : false;
+  return hasMatching ? isMatch(s.slice(1), p.slice(1)) : false; // false | false
 };
 
 console.log(isMatch('aa', 'a*'));
