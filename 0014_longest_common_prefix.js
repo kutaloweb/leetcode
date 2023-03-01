@@ -19,7 +19,7 @@
  * @param {string[]} strs
  * @return {string}
  */
-function longestCommonPrefix(strs) {
+const longestCommonPrefix = (strs) => {
   if (strs.length === 0 || strs[0] === "") return "";
   for (let i = 0; i < strs[0].length; i++) {
     let current = strs[0][i]; // f l o
@@ -36,7 +36,7 @@ function longestCommonPrefix(strs) {
  * @param {string[]} strs
  * @return {string}
  */
-function longestCommonPrefix2(strs) {
+const longestCommonPrefix2 = (strs) => {
   if (strs.length === 0 || strs[0] === "") return "";
   return longestCP(strs, 0, strs.length - 1); // ([ 'flower', 'flow', 'flight' ], 0, 2)
 }
