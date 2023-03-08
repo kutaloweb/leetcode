@@ -76,6 +76,4 @@ l.next = new ListNode(2);
 l.next.next = new ListNode(3);
 l.next.next.next = new ListNode(4);
 l.next.next.next.next = new ListNode(5);
-
-console.log(removeNthFromEnd(l, 2));
-printList(l);
+printList(removeNthFromEnd(l, 2));
