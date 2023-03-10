@@ -55,9 +55,10 @@ const mergeKLists = (lists) => {
   while (lists.length > 1) {
     // Subtracting the two lists from list:
     // We just need to grab the first one
-    let list1 = lists.shift();
+    let list1 = lists.shift(); // 1->2->4->null
     // We just need to grab the second one
     let list2 = lists.shift();
+    printList(list2) // 1->3->4->null
     // Need to merge two lists - with separate function
     let merged = mergeTwoLists(list1, list2);
     // Need to update merged value into the lists
@@ -94,7 +95,7 @@ const mergeTwoLists = (list1, list2) => {
   // Append to dummy the rest of the list
   curr.next = list1 === null ? list2 : list1;
   // Reference that we created at the start
-  return dummyNode.next;
+  return dummyNode.next; // 1->1->2->3->4->4->null
 };
 
 
@@ -104,4 +105,4 @@ l1.next.next = new ListNode(4);
 let l2 = new ListNode(1);
 l2.next = new ListNode(3);
 l2.next.next = new ListNode(4);
-printList(mergeTwoLists(l1, l2));
+printList(mergeKLists([l1, l2]));
