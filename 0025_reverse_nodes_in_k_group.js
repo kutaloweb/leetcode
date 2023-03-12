@@ -41,7 +41,7 @@ const printList = head => {
  * @param {number} k
  * @return {ListNode}
  */
-var reverseKGroup = function(head, k) {
+const reverseKGroup = (head, k) => {
   // (1->2->3->4->5->null, 2) (3->4->5->null, 2) (5->null, 2)
   // check if list or k is empty
   if (head === null || head.next === null) { // head: 5->null head.next: null
