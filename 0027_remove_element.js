@@ -34,15 +34,15 @@
 const removeElement = (nums, val) => {
   let prev = 0;
   for (let cur = 0; cur < nums.length; cur++) {
-    // nums[0] 1 !== 2  nums[1] 1 !== 2 nums[2] 2 === 2
+    // nums[0] 3 === 3  nums[1] 2 !== 3 nums[2] 2 !== 3 nums[3] 3 === 3
     if (nums[cur] !== val) {
-      // prev: 0 1 nums: [ 1, 1, 2 ] [ 1, 1, 2 ]
+      // prev: 0 1 nums: [ 3, 2, 2, 3 ] [ 2, 2, 2, 3 ]
       nums[prev++] = nums[cur];
-      // prev: 1 2 nums: [ 1, 1, 2 ] [ 1, 1, 2 ]
+      // prev: 1 2 nums: [ 2, 2, 2, 3 ] [ 2, 2, 2, 3 ]
     }
   }
-  nums = nums.slice(0, prev); //  [ 1, 1, 2 ] to [ 1, 1 ] optional
+  nums = nums.slice(0, prev); //  [ 2, 2, 2, 3 ] to [ 2, 2 ] optional
   return prev;
 };
 
-console.log(removeElement([1, 1, 2], 2));
+console.log(removeElement([3, 2, 2, 3], 3));
