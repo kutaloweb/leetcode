@@ -17,7 +17,11 @@
 // Output: -2
 // Explanation: 7/-3 = -2.33333.. which is truncated to -2.
 
-
+/**
+ * @param {number} dividend
+ * @param {number} divisor
+ * @return {number}
+ */
 const divide = (dividend, divisor) => {
   let count = 0;
   const isNegative = (dividend > 0 && divisor < 0) || (dividend < 0 && divisor > 0);
